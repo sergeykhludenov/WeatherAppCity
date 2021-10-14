@@ -24,6 +24,11 @@
             android:name=".feature.weather_screen.ui.WeatherScreenActivity">
 
         </activity>
+
+        <activity
+            android:name=".feature.wind_screen.WindScreenActivity">
+
+        </activity>
     </application>
 
 </manifest>
