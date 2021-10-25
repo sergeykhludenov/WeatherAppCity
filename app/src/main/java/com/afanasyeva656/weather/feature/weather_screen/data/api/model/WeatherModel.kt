@@ -1,10 +1,11 @@
 package com.afanasyeva656.weather.feature.weather_screen.data.api.model
 
+import com.afanasyeva656.weather.feature.wind_screen.api.WeatherWindModel
 import com.google.gson.annotations.SerializedName
 
 data class WeatherModel(
     @SerializedName("main") val main: WeatherMainModel,
-   @SerializedName("wind")  val wind: WeatherWindModel
+    @SerializedName("wind") val wind: WeatherWindModel
 )
 
 /*{

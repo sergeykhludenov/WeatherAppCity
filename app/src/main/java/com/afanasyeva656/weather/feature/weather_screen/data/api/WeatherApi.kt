@@ -2,8 +2,8 @@ package com.afanasyeva656.weather.feature.weather_screen.data.api
 
 import com.afanasyeva656.weather.feature.weather_screen.data.api.model.WeatherModel
 import okhttp3.ResponseBody
-import retrofit2.http.GET
-import retrofit2.http.Query
+    import retrofit2.http.GET
+    import retrofit2.http.Query
 
 // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 interface WeatherApi {

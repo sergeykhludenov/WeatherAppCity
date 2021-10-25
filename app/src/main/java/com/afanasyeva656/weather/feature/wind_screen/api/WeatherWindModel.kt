@@ -1,4 +1,4 @@
-package com.afanasyeva656.weather.feature.weather_screen.data.api.model
+package com.afanasyeva656.weather.feature.wind_screen.api
 
 import com.google.gson.annotations.SerializedName
 

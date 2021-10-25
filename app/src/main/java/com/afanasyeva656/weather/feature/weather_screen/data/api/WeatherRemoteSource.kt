@@ -4,6 +4,6 @@ import com.afanasyeva656.weather.feature.weather_screen.data.api.model.WeatherMo
 
 class WeatherRemoteSource(val api: WeatherApi) {
     suspend fun getWeather(cityName: String) : WeatherModel {
-        return api.getWeather("Moscow")
+        return api.getWeather(cityName)
     }
 }

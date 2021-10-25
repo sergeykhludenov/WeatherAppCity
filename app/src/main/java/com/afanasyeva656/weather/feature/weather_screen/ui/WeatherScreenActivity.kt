@@ -8,8 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.afanasyeva656.weather.R
 import com.afanasyeva656.weather.feature.weather_screen.domain.model.WeatherDomainModel
-import com.afanasyeva656.weather.feature.wind_screen.WindScreenActivity
-import kotlinx.coroutines.coroutineScope
+import com.afanasyeva656.weather.feature.wind_screen.ui.WindScreenActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class WeatherScreenActivity : AppCompatActivity() {
@@ -18,7 +17,7 @@ class WeatherScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
-        weatherScreenViewModel.lifeData.observe(this, Observer(::render))
+        weatherScreenViewModel.liveData.observe(this, Observer(::render))
         weatherScreenViewModel.requestWeather()
         findViewById<Button>(R.id.buttonWind).setOnClickListener {
             Intent(this, WindScreenActivity::class.java).also { startActivity(it) }
