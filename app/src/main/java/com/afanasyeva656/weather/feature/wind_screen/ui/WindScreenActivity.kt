@@ -15,12 +15,12 @@ class WindScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wind)
-        windScreenViewModel.liveData.observe(this, Observer(::render))
-        windScreenViewModel.requestWind()
+        windScreenViewModel.viewState.observe(this, Observer(::render))
+       //windScreenViewModel.requestWind()
 
     }
 
-    private fun render(model: WeatherDomainModel) {
-        findViewById<TextView>(R.id.tvWindDegree).let { it.text = model.windDomainModel.degree.toString() }
+    private fun render(model: ViewState2) {
+        findViewById<TextView>(R.id.tvWindDegree).let { it.text = model.degree.toString() }
     }
 }
